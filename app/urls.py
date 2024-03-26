@@ -10,7 +10,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 
-from core.views import UserViewSet, AcessorioViewSet, CategoriaViewSet, CorViewSet
+from core.views import UserViewSet, AcessorioViewSet, CategoriaViewSet, CorViewSet, MarcaViewSet
 
 router = DefaultRouter()
 
@@ -18,6 +18,7 @@ router.register(r"users", UserViewSet, basename="users")
 router.register(r"acessorio", AcessorioViewSet, basename="acessorios")
 router.register(r"categoria", CategoriaViewSet, basename="categorias")
 router.register(r"cor", CorViewSet, basename="cores")
+router.register(r"marca", MarcaViewSet, basename="marcas")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
